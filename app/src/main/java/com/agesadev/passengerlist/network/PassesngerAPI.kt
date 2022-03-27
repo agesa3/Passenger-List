@@ -9,7 +9,7 @@ import retrofit2.http.GET
 import retrofit2.http.Query
 
 interface PassesngerAPI {
-    @GET("/passengers")
+    @GET("passenger")
     suspend fun getPassengersData(
         @Query("page") page: Int,
         @Query("size") size: Int = 10
