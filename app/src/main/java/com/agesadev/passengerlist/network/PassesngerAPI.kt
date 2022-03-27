@@ -1,5 +1,6 @@
 package com.agesadev.passengerlist.network
 
+import com.agesadev.passengerlist.models.PassengerResponse
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -12,7 +13,7 @@ interface PassesngerAPI {
     suspend fun getPassengersData(
         @Query("page") page: Int,
         @Query("size") size: Int = 10
-    ): PassengersResponse
+    ): PassengerResponse
 
     companion object {
         private const val BASE_URL = "https://api.instantwebtools.net/v1/"
@@ -34,4 +35,3 @@ interface PassesngerAPI {
 
 }
 
-}
